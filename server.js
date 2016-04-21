@@ -11,11 +11,24 @@ var app = express(); //creates an express server call app
 var port = process.env.PORT || 4451;
 
 
+//schema
+var Schema = mongoose.Schema;
+//database connection
+mongoose.connect('mongodb:yeiber:sobles69@jello.modulusmongo.net:27017/I6tybapy');
+
+//new Schema
+var recipesSchema = new Schema({
+        recipe : String,
+        name: String
+});
+//model
+var recipesModel = mongoose.model('recipes1', recipesSchema);
+
 //routes 
 
 //default route
 app.get('/', function(req, res){
-    res.send('we are connecting to a get resquest')
+    res.send('we are connecting to a get resquest');
 });
 
 
