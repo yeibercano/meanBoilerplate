@@ -16,7 +16,7 @@ var Schema = mongoose.Schema;
 //database connection
 mongoose.connect('mongodb:yeiber:sobles69@jello.modulusmongo.net:27017/I6tybapy');
 
-//new Schema
+//new Schema instantiation 
 var recipesSchema = new Schema({
         recipe : String,
         name: String
@@ -24,8 +24,12 @@ var recipesSchema = new Schema({
 //model
 var recipesModel = mongoose.model('recipes1', recipesSchema);
 
-//routes 
+//use
+app.use(express.static(__dirname + '/client'));
+app.use(bodyParser.json());
 
+
+//routes 
 //default route
 app.get('/', function(req, res){
     res.send('we are connecting to a get resquest');
