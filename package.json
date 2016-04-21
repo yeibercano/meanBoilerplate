@@ -1,0 +1,25 @@
+{
+  "name": "mean-boilerplate",
+  "version": "1.0.0",
+  "description": "basic mean stack boilerplate",
+  "main": "server.js",
+  "scripts": {
+    "test": "start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeibercano/meanBoilerplate.git"
+  },
+  "keywords": [
+    "mean",
+    "stack",
+    "boilerplate"
+  ],
+  "author": "Yeiber Cano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeibercano/meanBoilerplate/issues"
+  },
+  "homepage": "https://github.com/yeibercano/meanBoilerplate#readme"
+}
