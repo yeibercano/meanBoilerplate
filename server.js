@@ -14,7 +14,7 @@ var port = process.env.PORT || 4451;
 //schema
 var Schema = mongoose.Schema;
 //database connection
-mongoose.connect('mongodb:yeiber:sobles69@jello.modulusmongo.net:27017/I6tybapy');
+mongoose.connect('mongodb://<user>r:<password>@jello.modulusmongo.net:27017/o8jaBuma');
 
 //new Schema instantiation 
 var recipesSchema = new Schema({
@@ -27,13 +27,16 @@ var recipesModel = mongoose.model('recipes1', recipesSchema);
 //use
 app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
+app.use(morgan('dev'));
 
 
 //routes 
-//default route
+//default get route
 app.get('/', function(req, res){
-    res.send('we are connecting to a get resquest');
+    console.log('there');
+    res.send('index.html');
 });
+//post request
 
 
 //connects the port to the app server
